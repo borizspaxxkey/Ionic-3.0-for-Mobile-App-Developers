@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Favorite</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let music of favoriteSongs">
+    <img [src]="music.image" />
+    <ion-card-content>
+      <ion-card-title>{{music.name}}</ion-card-title>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>All Products</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card *ngFor="let product of allProducts" (click)="goToProductDetailPage(product)">
+    <img [src]="product.image" />
+  </ion-card>
+
+  <ion-fab bottom right>
+    <button ion-fab (click)="openFilterModal()">
+      <ion-icon name="settings"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>
